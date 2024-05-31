@@ -141,7 +141,7 @@ class JobProfileSection extends Component {
           />
           <button
             type="button"
-            testid="searchButton"
+            data-testid="searchButton"
             className="search-button"
             onClick={this.getJobDetails}
           >
@@ -167,7 +167,7 @@ class JobProfileSection extends Component {
           />
           <button
             type="button"
-            testid="searchButton"
+            data-testid="searchButton"
             className="search-button"
             onClick={this.getJobDetails}
           >
@@ -200,7 +200,7 @@ class JobProfileSection extends Component {
       </p>
       <button
         type="button"
-        testid="button"
+        data-testid="button"
         className="jobs-failure-button"
         onClick={this.getJobDetails}
       >
@@ -210,7 +210,7 @@ class JobProfileSection extends Component {
   )
 
   renderLoadingView = () => (
-    <div className="profile-loader-container" testid="loader">
+    <div className="profile-loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )

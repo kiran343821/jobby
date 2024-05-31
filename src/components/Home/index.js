@@ -1,40 +1,25 @@
-import Cookies from 'js-cookie'
-import {withRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import Header from '../Header'
 import './index.css'
 
-const Header = props => {
-  const onClickLogout = () => {
-    const {history} = props
-    Cookies.remove('jwt_token')
-    history.replace('/login')
-  }
-
-  return (
-    <nav className="navbar-container">
-      <div>
-        <Link to="/" className="link-item">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-            alt="website logo"
-            className="website-logo"
-          />
+const Home = () => (
+  <div className="home-container">
+    <Header />
+    <div className="home-page">
+      <div className="home-page-content">
+        <h1 className="home-heading">Find The Job That Fits Your Life</h1>
+        <p className="home-description">
+          Millions of people are searching for jobs, salary information, company
+          reviews. Find the job that fits your abilities and potential.
+        </p>
+        <Link to="/jobs">
+          <button className="find-jobs-button" type="button">
+            Find Jobs
+          </button>
         </Link>
       </div>
-      <ul className="header-list-items">
-        <Link to="/" className="link-item">
-          <li className="home-heading home">Home</li>
-        </Link>
-        <Link to="/jobs" className="link-item">
-          <li className="jon-heading home">Jobs</li>
-        </Link>
-      </ul>
-      <div>
-        <button type="button" className="logout-button" onClick={onClickLogout}>
-          Logout
-        </button>
-      </div>
-    </nav>
-  )
-}
+    </div>
+  </div>
+)
 
-export default withRouter(Header)
+export default Home
