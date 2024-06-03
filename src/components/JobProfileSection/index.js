@@ -150,7 +150,7 @@ class JobProfileSection extends Component {
         </div>
         <ul className="job-details-item-container">
           {jobsList.map(eachData => (
-            <JobCard key={eachData.id} jobDetails={eachData} />
+            <JobCard key={eachData.name} jobDetails={eachData} />
           ))}
         </ul>
       </div>
